@@ -91,6 +91,12 @@
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolioContent a:hover{
+    border-bottom: 2px solid #fff;
+    color: #fff;
 }
 
 .loadBtn {
@@ -104,6 +110,13 @@
     padding: 10px 25px;
     color: #fff;
     font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.loadBtn a:hover{
+    background: #fff;
+    color: red;
+    border: 1px solid red;
 }
 
 

@@ -94,7 +94,7 @@ function task_book_category() {
         'separate_items_with_commas' => __( 'Separate Categories with commas', 'task' ),
         'add_or_remove_items'        => __( 'Add or remove Categories', 'task' ),
         'choose_from_most_used'      => __( 'Choose from the most used Categories', 'task' ),
-        'not_found'                  => __( 'No Categories found.', 'task' ),
+        'not_found'                  => __( 'No Book Categories found.', 'task' ),
         'menu_name'                  => __( 'Categories', 'task' ),
     );
 
@@ -111,7 +111,7 @@ function task_book_category() {
     register_taxonomy( 'book_category', 'book', $args );
 }
 
- function tbare_wordpress_plugin_demo($atts) {
+ function book_custom_post_shortcode($atts) {
 
      $result = shortcode_atts( array(
         'per_page' => '',
@@ -160,7 +160,7 @@ function task_book_category() {
                 <div class="portfolioContent">
                     <h3><?php the_title() ?></h3>
                     <p><?php the_content(); ?></p>
-                    <a href="<?php the_permalink(); ?>">Read More</a>
+                    <a href="<?php the_permalink(); ?>"><?php echo __("Read More", "task"); ?></a>
                 </div>
             </div>      
         </div>
@@ -170,7 +170,7 @@ function task_book_category() {
     </div>
 
     <div class="loadBtn">
-        <a href="">Load More</a>
+        <a href=""><?php echo __("Load More", "task"); ?></a>
     </div>
 </div>
     <!--portfolio section end-->
@@ -182,4 +182,4 @@ function task_book_category() {
 }
 
 
-add_shortcode('books', 'tbare_wordpress_plugin_demo');
+add_shortcode('books', 'book_custom_post_shortcode');
